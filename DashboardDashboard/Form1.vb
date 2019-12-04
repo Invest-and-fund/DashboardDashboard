@@ -23,31 +23,53 @@ Public Class Form1
 
     Private Sub bFinance_Click(sender As Object, e As EventArgs) Handles bFinance.Click
         Dim AppPath As String = ConfigurationManager.AppSettings.Get("FinanceApp")
-        Dim proc As Process = Process.Start(AppPath)
+        Dim appEnv As String = AppPath.Replace("\" & AppPath.Split("\").Last, "")
+        Dim proc As New ProcessStartInfo()
+        proc.FileName = AppPath
+        proc.WorkingDirectory = appEnv
+        Process.Start(proc)
+
     End Sub
 
     Private Sub bOMA_Click(sender As Object, e As EventArgs) Handles bOMA.Click
         Dim AppPath As String = ConfigurationManager.AppSettings.Get("OMAApp")
-        Dim proc As Process = Process.Start(AppPath)
+        Dim appEnv As String = AppPath.Replace("\" & AppPath.Split("\").Last, "")
+        Dim proc As New ProcessStartInfo()
+        proc.FileName = AppPath
+        proc.WorkingDirectory = appEnv
+        Process.Start(proc)
     End Sub
 
     Private Sub bMandates_Click(sender As Object, e As EventArgs) Handles bMandates.Click
         Dim AppPath As String = ConfigurationManager.AppSettings.Get("MandatesApp")
-        Dim proc As Process = Process.Start(AppPath)
+        Dim appEnv As String = AppPath.Replace("\" & AppPath.Split("\").Last, "")
+        Dim proc As New ProcessStartInfo()
+        proc.FileName = AppPath
+        proc.WorkingDirectory = appEnv
+        Process.Start(proc)
     End Sub
 
     Private Sub bSupport_Click(sender As Object, e As EventArgs) Handles bSupport.Click
         Dim AppPath As String = ConfigurationManager.AppSettings.Get("SupportApp")
-        Dim proc As Process = Process.Start(AppPath)
+        Dim appEnv As String = AppPath.Replace("\" & AppPath.Split("\").Last, "")
+        Dim proc As New ProcessStartInfo()
+        proc.FileName = AppPath
+        proc.WorkingDirectory = appEnv
+        Process.Start(proc)
     End Sub
 
     Private Sub bOperations_Click(sender As Object, e As EventArgs) Handles bOperations.Click
         Dim AppPath As String = ConfigurationManager.AppSettings.Get("OperationsApp")
-        Dim proc As Process = Process.Start(AppPath)
+        Dim appEnv As String = AppPath.Replace("\" & AppPath.Split("\").Last, "")
+        Dim proc As New ProcessStartInfo()
+        proc.FileName = AppPath
+        proc.WorkingDirectory = appEnv
+        Process.Start(proc)
     End Sub
 
     Private Sub bOfflineLender_Click(sender As Object, e As EventArgs) Handles bOfflineLender.Click
-        Dim AppPath As String = ConfigurationManager.AppSettings.Get("OfflineLenderApp")
-        Dim proc As Process = Process.Start(AppPath)
+        MessageBox.Show("This application is not available at this time")
+        'Dim AppPath As String = ConfigurationManager.AppSettings.Get("OfflineLenderApp")
+        'Dim proc As Process = Process.Start(AppPath)
     End Sub
 End Class
