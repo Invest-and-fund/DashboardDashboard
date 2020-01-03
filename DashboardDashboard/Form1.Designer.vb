@@ -29,6 +29,9 @@ Partial Class Form1
         Me.bSupport = New System.Windows.Forms.Button()
         Me.bMandates = New System.Windows.Forms.Button()
         Me.lEnvironment = New System.Windows.Forms.Label()
+        Me.bMailchimp = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'bFinance
@@ -89,18 +92,37 @@ Partial Class Form1
         '
         Me.lEnvironment.AutoSize = True
         Me.lEnvironment.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lEnvironment.Location = New System.Drawing.Point(32, 37)
+        Me.lEnvironment.Location = New System.Drawing.Point(41, 64)
         Me.lEnvironment.Name = "lEnvironment"
         Me.lEnvironment.Size = New System.Drawing.Size(137, 20)
         Me.lEnvironment.TabIndex = 6
         Me.lEnvironment.Text = "...environment..."
         Me.lEnvironment.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'bMailchimp
+        '
+        Me.bMailchimp.Location = New System.Drawing.Point(26, 435)
+        Me.bMailchimp.Name = "bMailchimp"
+        Me.bMailchimp.Size = New System.Drawing.Size(152, 52)
+        Me.bMailchimp.TabIndex = 7
+        Me.bMailchimp.Text = "Mailchimp Curator"
+        Me.bMailchimp.UseVisualStyleBackColor = True
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Location = New System.Drawing.Point(12, 11)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(100, 50)
+        Me.PictureBox1.TabIndex = 8
+        Me.PictureBox1.TabStop = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(315, 498)
+        Me.ClientSize = New System.Drawing.Size(315, 538)
+        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.bMailchimp)
         Me.Controls.Add(Me.lEnvironment)
         Me.Controls.Add(Me.bMandates)
         Me.Controls.Add(Me.bSupport)
@@ -110,6 +132,7 @@ Partial Class Form1
         Me.Controls.Add(Me.bFinance)
         Me.Name = "Form1"
         Me.Text = "Invest and Fund Dashboard"
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -122,4 +145,6 @@ Partial Class Form1
     Friend WithEvents bSupport As Button
     Friend WithEvents bMandates As Button
     Friend WithEvents lEnvironment As Label
+    Friend WithEvents bMailchimp As Button
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

@@ -7,15 +7,17 @@ Public Class Form1
         Dim sEnv As String = System.Configuration.ConfigurationManager.AppSettings.Get("EnvironmentIs").ToUpper
         Select Case sEnv
             Case "LIVE"
-                lEnvironment.Text = "LIVE"
+                lEnvironment.Text = "LIVE SERVER"
             Case "SHADOW"
-                lEnvironment.Text = "SHADOW"
+                lEnvironment.Text = "SHADOW SERVER"
             Case "USER"
-                lEnvironment.Text = "USER TESTING"
+                lEnvironment.Text = "USER TESTING SERVER"
             Case "DEV"
-                lEnvironment.Text = "DEVELOPMENT"
+                lEnvironment.Text = "DEVELOPMENT SERVER"
             Case "UAT"
-                lEnvironment.Text = "UAT"
+                lEnvironment.Text = "UAT SERVER"
+            Case "TESTING"
+                lEnvironment.Text = "TESTING SERVER"
             Case Else
                 lEnvironment.Text = "Unrecognised Environment"
         End Select
@@ -68,8 +70,20 @@ Public Class Form1
     End Sub
 
     Private Sub bOfflineLender_Click(sender As Object, e As EventArgs) Handles bOfflineLender.Click
-        MessageBox.Show("This application is not available at this time")
-        'Dim AppPath As String = ConfigurationManager.AppSettings.Get("OfflineLenderApp")
-        'Dim proc As Process = Process.Start(AppPath)
+        Dim AppPath As String = ConfigurationManager.AppSettings.Get("OfflineLenderApp")
+        Dim appEnv As String = AppPath.Replace("\" & AppPath.Split("\").Last, "")
+        Dim proc As New ProcessStartInfo()
+        proc.FileName = AppPath
+        proc.WorkingDirectory = appEnv
+        Process.Start(proc)
+    End Sub
+
+    Private Sub bMailchimp_Click(sender As Object, e As EventArgs) Handles bMailchimp.Click
+        Dim AppPath As String = ConfigurationManager.AppSettings.Get("MailchimpCurator")
+        Dim appEnv As String = AppPath.Replace("\" & AppPath.Split("\").Last, "")
+        Dim proc As New ProcessStartInfo()
+        proc.FileName = AppPath
+        proc.WorkingDirectory = appEnv
+        Process.Start(proc)
     End Sub
 End Class
