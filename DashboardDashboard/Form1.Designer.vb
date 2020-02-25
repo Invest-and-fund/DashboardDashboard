@@ -22,6 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.bFinance = New System.Windows.Forms.Button()
         Me.bOMA = New System.Windows.Forms.Button()
         Me.bOfflineLender = New System.Windows.Forms.Button()
@@ -31,7 +32,9 @@ Partial Class Form1
         Me.lEnvironment = New System.Windows.Forms.Label()
         Me.bMailchimp = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'bFinance
@@ -92,7 +95,8 @@ Partial Class Form1
         '
         Me.lEnvironment.AutoSize = True
         Me.lEnvironment.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lEnvironment.Location = New System.Drawing.Point(41, 64)
+        Me.lEnvironment.ForeColor = System.Drawing.Color.White
+        Me.lEnvironment.Location = New System.Drawing.Point(56, 55)
         Me.lEnvironment.Name = "lEnvironment"
         Me.lEnvironment.Size = New System.Drawing.Size(137, 20)
         Me.lEnvironment.TabIndex = 6
@@ -110,20 +114,32 @@ Partial Class Form1
         '
         'PictureBox1
         '
+        Me.PictureBox1.BackgroundImage = CType(resources.GetObject("PictureBox1.BackgroundImage"), System.Drawing.Image)
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.PictureBox1.Location = New System.Drawing.Point(12, 11)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(100, 50)
+        Me.PictureBox1.Size = New System.Drawing.Size(219, 50)
         Me.PictureBox1.TabIndex = 8
         Me.PictureBox1.TabStop = False
+        '
+        'Panel1
+        '
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(52, Byte), Integer), CType(CType(65, Byte), Integer))
+        Me.Panel1.Controls.Add(Me.lEnvironment)
+        Me.Panel1.Location = New System.Drawing.Point(377, -29)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(251, 577)
+        Me.Panel1.TabIndex = 9
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(315, 538)
+        Me.BackColor = System.Drawing.SystemColors.ControlLightLight
+        Me.ClientSize = New System.Drawing.Size(616, 538)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.bMailchimp)
-        Me.Controls.Add(Me.lEnvironment)
         Me.Controls.Add(Me.bMandates)
         Me.Controls.Add(Me.bSupport)
         Me.Controls.Add(Me.bOperations)
@@ -133,8 +149,9 @@ Partial Class Form1
         Me.Name = "Form1"
         Me.Text = "Invest and Fund Dashboard"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
@@ -147,4 +164,5 @@ Partial Class Form1
     Friend WithEvents lEnvironment As Label
     Friend WithEvents bMailchimp As Button
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Panel1 As Panel
 End Class
