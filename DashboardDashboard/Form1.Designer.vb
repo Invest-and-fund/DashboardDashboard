@@ -33,6 +33,8 @@ Partial Class Form1
         Me.bMailchimp = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.bLoanLenders = New System.Windows.Forms.Button()
+        Me.bHoldings = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -128,15 +130,35 @@ Partial Class Form1
         Me.Panel1.Controls.Add(Me.lEnvironment)
         Me.Panel1.Location = New System.Drawing.Point(377, -29)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(251, 577)
+        Me.Panel1.Size = New System.Drawing.Size(251, 666)
         Me.Panel1.TabIndex = 9
+        '
+        'bLoanLenders
+        '
+        Me.bLoanLenders.Location = New System.Drawing.Point(26, 493)
+        Me.bLoanLenders.Name = "bLoanLenders"
+        Me.bLoanLenders.Size = New System.Drawing.Size(152, 52)
+        Me.bLoanLenders.TabIndex = 10
+        Me.bLoanLenders.Text = "Loan Lenders"
+        Me.bLoanLenders.UseVisualStyleBackColor = True
+        '
+        'bHoldings
+        '
+        Me.bHoldings.Location = New System.Drawing.Point(26, 551)
+        Me.bHoldings.Name = "bHoldings"
+        Me.bHoldings.Size = New System.Drawing.Size(152, 52)
+        Me.bHoldings.TabIndex = 11
+        Me.bHoldings.Text = "Current Loan Holdings"
+        Me.bHoldings.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ClientSize = New System.Drawing.Size(616, 538)
+        Me.ClientSize = New System.Drawing.Size(616, 631)
+        Me.Controls.Add(Me.bHoldings)
+        Me.Controls.Add(Me.bLoanLenders)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.bMailchimp)
@@ -165,4 +187,6 @@ Partial Class Form1
     Friend WithEvents bMailchimp As Button
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents bLoanLenders As Button
+    Friend WithEvents bHoldings As Button
 End Class

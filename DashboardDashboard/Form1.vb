@@ -92,4 +92,20 @@ Public Class Form1
         proc.WorkingDirectory = appEnv
         Process.Start(proc)
     End Sub
+    Private Sub bLoanLenders_Click(sender As Object, e As EventArgs) Handles bLoanLenders.Click
+        Dim AppPath As String = ConfigurationManager.AppSettings.Get("LoanLendersApp")
+        Dim appEnv As String = AppPath.Replace("\" & AppPath.Split("\").Last, "")
+        Dim proc As New ProcessStartInfo()
+        proc.FileName = AppPath
+        proc.WorkingDirectory = appEnv
+        Process.Start(proc)
+    End Sub
+    Private Sub bHoldings_Click(sender As Object, e As EventArgs) Handles bHoldings.Click
+        Dim AppPath As String = ConfigurationManager.AppSettings.Get("HoldingsApp")
+        Dim appEnv As String = AppPath.Replace("\" & AppPath.Split("\").Last, "")
+        Dim proc As New ProcessStartInfo()
+        proc.FileName = AppPath
+        proc.WorkingDirectory = appEnv
+        Process.Start(proc)
+    End Sub
 End Class
