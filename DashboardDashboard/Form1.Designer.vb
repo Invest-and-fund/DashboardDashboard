@@ -35,6 +35,7 @@ Partial Class Form1
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.bLoanLenders = New System.Windows.Forms.Button()
         Me.bHoldings = New System.Windows.Forms.Button()
+        Me.bMIData = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -130,7 +131,7 @@ Partial Class Form1
         Me.Panel1.Controls.Add(Me.lEnvironment)
         Me.Panel1.Location = New System.Drawing.Point(377, -29)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(251, 666)
+        Me.Panel1.Size = New System.Drawing.Size(251, 739)
         Me.Panel1.TabIndex = 9
         '
         'bLoanLenders
@@ -151,12 +152,22 @@ Partial Class Form1
         Me.bHoldings.Text = "Current Loan Holdings"
         Me.bHoldings.UseVisualStyleBackColor = True
         '
+        'bMIData
+        '
+        Me.bMIData.Location = New System.Drawing.Point(26, 609)
+        Me.bMIData.Name = "bMIData"
+        Me.bMIData.Size = New System.Drawing.Size(152, 52)
+        Me.bMIData.TabIndex = 12
+        Me.bMIData.Text = "MI Data"
+        Me.bMIData.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
-        Me.ClientSize = New System.Drawing.Size(616, 631)
+        Me.ClientSize = New System.Drawing.Size(616, 697)
+        Me.Controls.Add(Me.bMIData)
         Me.Controls.Add(Me.bHoldings)
         Me.Controls.Add(Me.bLoanLenders)
         Me.Controls.Add(Me.Panel1)
@@ -189,4 +200,5 @@ Partial Class Form1
     Friend WithEvents Panel1 As Panel
     Friend WithEvents bLoanLenders As Button
     Friend WithEvents bHoldings As Button
+    Friend WithEvents bMIData As Button
 End Class
