@@ -35,7 +35,6 @@ Partial Class Form1
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.bLoanLenders = New System.Windows.Forms.Button()
         Me.bHoldings = New System.Windows.Forms.Button()
-        Me.bMIData = New System.Windows.Forms.Button()
         Me.bMIData2 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -153,22 +152,13 @@ Partial Class Form1
         Me.bHoldings.Text = "Current Loan Holdings"
         Me.bHoldings.UseVisualStyleBackColor = True
         '
-        'bMIData
-        '
-        Me.bMIData.Location = New System.Drawing.Point(26, 609)
-        Me.bMIData.Name = "bMIData"
-        Me.bMIData.Size = New System.Drawing.Size(152, 52)
-        Me.bMIData.TabIndex = 12
-        Me.bMIData.Text = "MI Data"
-        Me.bMIData.UseVisualStyleBackColor = True
-        '
         'bMIData2
         '
-        Me.bMIData2.Location = New System.Drawing.Point(26, 667)
+        Me.bMIData2.Location = New System.Drawing.Point(26, 609)
         Me.bMIData2.Name = "bMIData2"
         Me.bMIData2.Size = New System.Drawing.Size(152, 52)
         Me.bMIData2.TabIndex = 13
-        Me.bMIData2.Text = "MI Data Mk2 (QA)"
+        Me.bMIData2.Text = "MI Data"
         Me.bMIData2.UseVisualStyleBackColor = True
         '
         'Form1
@@ -178,7 +168,6 @@ Partial Class Form1
         Me.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.ClientSize = New System.Drawing.Size(616, 758)
         Me.Controls.Add(Me.bMIData2)
-        Me.Controls.Add(Me.bMIData)
         Me.Controls.Add(Me.bHoldings)
         Me.Controls.Add(Me.bLoanLenders)
         Me.Controls.Add(Me.Panel1)
@@ -211,6 +200,5 @@ Partial Class Form1
     Friend WithEvents Panel1 As Panel
     Friend WithEvents bLoanLenders As Button
     Friend WithEvents bHoldings As Button
-    Friend WithEvents bMIData As Button
     Friend WithEvents bMIData2 As Button
 End Class

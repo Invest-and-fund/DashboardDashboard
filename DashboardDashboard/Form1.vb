@@ -108,16 +108,6 @@ Public Class Form1
         proc.WorkingDirectory = appEnv
         Process.Start(proc)
     End Sub
-
-    Private Sub bMIData_Click(sender As Object, e As EventArgs) Handles bMIData.Click
-        Dim AppPath As String = ConfigurationManager.AppSettings.Get("MIDataApp")
-        Dim appEnv As String = AppPath.Replace("\" & AppPath.Split("\").Last, "")
-        Dim proc As New ProcessStartInfo()
-        proc.FileName = AppPath
-        proc.WorkingDirectory = appEnv
-        Process.Start(proc)
-    End Sub
-
     Private Sub bMIData2_Click(sender As Object, e As EventArgs) Handles bMIData2.Click
         Dim AppPath As String = ConfigurationManager.AppSettings.Get("MIDataAppMk2")
         Dim appEnv As String = AppPath.Replace("\" & AppPath.Split("\").Last, "")
